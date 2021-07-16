@@ -51,38 +51,31 @@ PROGRAM:
         p[i]=p[pos];
         p[pos]=temp;
     }
-    for(i = 0 ; i < n ; i++)
-    {
-        printf("%d ",it[i]);
-    }
    
     wt[0]=0;            
   
-   printf("waiting times\n");
     for(i=1;i<n;i++)
     {
         wt[i]=0;
         for(j=0;j<i;j++)
             wt[i]+=it[j];
-            printf("%d\n",wt[i]);
   
         total+=wt[i];
     }
-  
-    avg_wt=(float)total/n;      
+     avg_wt=(float)total/n;      
     total=0;
   
-    printf("finish Time\n");
+    printf("\ninterviewes\t interview time\twaiting time\tfinish Time\n");
     for(i=0;i<n;i++)
     {
         ft[i]=it[i]+wt[i];
-        printf("%d\n",ft[i]);
+        printf("\np%d\t\t %d\t\t  %d\t\t\t%d",p[i],it[i],wt[i],ft[i]);
         total+=ft[i];
     }
        
   
     avg_ft=(float)total/n;    
-    printf("Average Waiting Time=%f\n",avg_wt);
-    printf("Average Finish Time=%f\n",avg_ft);
+    printf("\n\nAverage Waiting Time=%f",avg_wt);
+    printf("\nAverage Finish Time=%f\n",avg_ft);
     return 0;
 }
