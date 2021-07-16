@@ -22,7 +22,7 @@ PROGRAM:
 {
     int it[20],p[20],wt[20],ft[20],i,j,n,total=0,pos,temp;
     float avg_wt,avg_ft;
-    printf("Enter number of interviews:\n");
+    printf("Enter number of process:\n");
     scanf("%d",&n);
   
     printf("Enter interview Time:\n");
@@ -65,7 +65,7 @@ PROGRAM:
      avg_wt=(float)total/n;      
     total=0;
   
-    printf("\ninterviewes\t interview time\twaiting time\tfinish Time\n");
+    printf("\nprocess\t interview time\twaiting time\tfinish Time\n");
     for(i=0;i<n;i++)
     {
         ft[i]=it[i]+wt[i];
